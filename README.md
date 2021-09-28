@@ -15,6 +15,9 @@ The extension is ready-built in the `./dist` folder. Clone the repo and try it o
 
 If all is well, you'll be able test the extension as follows:
 
+![ChromeExtension](https://user-images.githubusercontent.com/285421/135155734-782f5929-4ac8-46fb-9c18-53cfada3d91f.gif)
+
+
 ### Developing the Extension
 
 - Clone the repo
