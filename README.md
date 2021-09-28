@@ -18,7 +18,7 @@ The extension is ready-built in the `./dist` folder. Clone the repo and try it o
 
 If all is well, you'll be able test the extension as follows:
 
-![ChromeExtension](https://user-images.githubusercontent.com/285421/135155734-782f5929-4ac8-46fb-9c18-53cfada3d91f.gif)
+![Sutil Chrome Extension](https://user-images.githubusercontent.com/285421/135159208-eaaa6fbc-7611-4a9f-94a5-53135e191f89.gif)
 
 ### Developing the Extension
 
