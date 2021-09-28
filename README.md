@@ -45,6 +45,8 @@ $ npm run build
 
 Upon each build, go back to the `chrome://extensions` page and `refresh` the extension.
 
+<img width="539" alt="image" src="https://user-images.githubusercontent.com/285421/135159835-bd6ec235-612f-4d2f-a72b-0a07466338d4.png">
+
 ### Console Output
 
 Output from `Background.fs` will be visible in the developer window accessible from `Inspect views:
