@@ -1,0 +1,6 @@
+package-lock.json
+node_modules
+src/*/obj
+src/*/bin
+.DS_Store
+src/*/*.fs.js

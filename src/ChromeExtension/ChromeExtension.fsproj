@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <UseLocalSutil>False</UseLocalSutil>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Background.fs" />
+    <Compile Include="Popup.fs" />
+  </ItemGroup>
+
+  <Choose>
+    <When Condition=" '$(UseLocalSutil)'=='True' ">
+        <ItemGroup>
+            <ProjectReference Include="..\..\..\Sutil\src\Sutil\Sutil.fsproj" />
+        </ItemGroup>
+    </When>
+    <When Condition=" '$(UseLocalSutil)'=='False' ">
+        <ItemGroup>
+            <PackageReference Include="Sutil" Version="1.0.0-beta-009" />
+        </ItemGroup>
+    </When>
+  </Choose>
+
+  <ItemGroup>
+    <PackageReference Include="Fable.Browser.Css" Version="2.*" />
+    <PackageReference Include="Fable.Browser.Dom" Version="2.*" />
+    <PackageReference Include="Fable.Core" Version="3.*" />
+  </ItemGroup>
+</Project>
