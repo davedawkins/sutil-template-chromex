@@ -11,6 +11,7 @@ This example was derived from [Getting Started with Chrome Extensions](https://d
 The extension is ready-built in the `./dist` folder. Clone the repo and try it out as follows:
 
 (By the way, these are the same instructions you'll find [here](https://developer.chrome.com/docs/extensions/mv3/getstarted/))
+
 - In Chrome, go to `chrome://extensions`
 - Click `Load unpacked`
 - Select the `dist` folder
@@ -49,7 +50,7 @@ Upon each build, go back to the `chrome://extensions` page and `refresh` the ext
 Output from `Background.fs` will be visible in the developer window accessible from `Inspect views:
 service worker` link, found on the `chrome://extensions` page.
 
-Output from `Popup.js` will be visible from the developer window accessible when you `right-click -> Inspect` inside the window created from `popup.html` (i.e., where the button appears when you activate the extension)
+Output from `Popup.fs` will be visible from the developer window accessible when you `right-click -> Inspect` inside the window created from `popup.html` (i.e., where the button appears when you activate the extension)
 
 ### Browser APIs
 
