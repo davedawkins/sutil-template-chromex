@@ -17,7 +17,6 @@ If all is well, you'll be able test the extension as follows:
 
 ![ChromeExtension](https://user-images.githubusercontent.com/285421/135155734-782f5929-4ac8-46fb-9c18-53cfada3d91f.gif)
 
-
 ### Developing the Extension
 
 - Clone the repo
@@ -28,6 +27,12 @@ If all is well, you'll be able test the extension as follows:
 $ npm install
 $ dotnet tool restore
 ```
+
+- Developing the UI
+
+You can treat `Popup.fs` as a regular (Sutil) web application. In fact, you don't *have* to use Sutil here at all. You could just use the `Browser.Dom` APIs and go on a `document.createElement(..)` bender, though I feel you'll have more fun and an easier time using Sutil :-)
+
+The modules `Background.fs` and `Popup.fs` do play different roles in the extension though, and this is best explained by the Chrome documentation. You'll see that `Background.fs` is where we can catch the `onInstalled` event.
 
 - To build
 
@@ -47,3 +52,7 @@ Output from `Popup.js` will be visible from the developer window accessible when
 ### Browser APIs
 
 Currently, there is minimal support for the `chrome.storage.*` and `chrome.runtime.*` etc APIs. This will be a work-in-progress, but it's fairly easy to move your project forward in the meantime, thanks to Fable's awesome interop capabilities.
+
+### Support for other Browsers
+
+Currently, Sutil is exporting a `Chrome.*` API, but there is a polyfill that will allow me to unify this to a more useful `browser.*` API, and then it should be possible to create extensions for other browsers too.
