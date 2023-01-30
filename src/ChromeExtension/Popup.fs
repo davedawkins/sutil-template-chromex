@@ -3,8 +3,6 @@ module Popup
 // Derived from https://developer.chrome.com/docs/extensions/mv3/getstarted/
 
 open Sutil
-open Sutil.Attr
-open Sutil.DOM
 open Sutil.Styling
 open type Feliz.length
 open Fable.Core.JsInterop
@@ -31,11 +29,11 @@ let view() =
     Html.button [
         Bind.attr( "style", store |> Store.map colorToStyle )
 
-        onClick (fun _ ->
+        Ev.onClick (fun _ ->
             Chrome.Storage.Sync.get("color", fun value -> value?color |> Store.set store)
-        ) []
+        )
 
-        disposeOnUnmount [ store ]
+        CoreElements.disposeOnUnmount [ store ]
     ] |> withStyle style
 
 view() |> Program.mountElement "sutil-app"
