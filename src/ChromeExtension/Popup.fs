@@ -36,4 +36,4 @@ let view() =
         CoreElements.disposeOnUnmount [ store ]
     ] |> withStyle style
 
-view() |> Program.mountElement "sutil-app"
+view() |> Program.mount

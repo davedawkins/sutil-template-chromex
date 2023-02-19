@@ -4,3 +4,4 @@ src/*/obj
 src/*/bin
 .DS_Store
 src/*/*.fs.js
+dist/*.js
